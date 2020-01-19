@@ -81,7 +81,9 @@ bugsRouter
   })
 
   .get((req, res) => {
-    res.json(serializeBugs(res.bug), res.steps.map(serializeSteps))
+    res.json(serializeBugs(res.bug))
+    res.json(res.steps.map(serializeSteps))
   })
+
 
 module.exports = bugsRouter;
