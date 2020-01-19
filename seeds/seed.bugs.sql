@@ -1,5 +1,4 @@
 INSERT INTO bugs (
-  bug_id, 
   bug_name,
   application_id,
   ticket_number, 
@@ -16,7 +15,6 @@ INSERT INTO bugs (
   last_updated
 )
 VALUES (
-  1,
   'Bug 1',
   1,
   '14538',
@@ -33,7 +31,6 @@ VALUES (
   '2019-12-27T12:00:00-06:30'
 ),
 (
-  2,
   'Bug 2',
   2,
   '19088',
@@ -50,7 +47,6 @@ VALUES (
   '2015-04-27T12:00:00-06:30'
 ),
 (
-  3,
   'Bug 3',
   1,
   '16738',
@@ -65,4 +61,4 @@ VALUES (
   'Samwise',
   'maybe smeagal took it',
   '2015-05-27T12:00:00-06:30'
-)
+);

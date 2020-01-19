@@ -1,3 +1,49 @@
 {"message":"Unauthorized request to path: /","level":"error"}
 {"message":"Unauthorized request to path: /","level":"error"}
 {"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"applicationnext is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"appplication is not defined","level":"error"}
+{"message":"application_id is not defined","level":"error"}
+{"message":"application_id is not defined","level":"error"}
+{"message":"application_ids is not defined","level":"error"}
+{"message":"applications_id is not defined","level":"error"}
+{"message":"application_id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"applications is not defined","level":"error"}
+{"message":"ApplicationsService.getAllData is not a function","level":"error"}
+{"message":"serializeData is not defined","level":"error"}
+{"message":"ApplicationsService.getById(...).then is not a function","level":"error"}
+{"message":"application_name is not defined","level":"error"}
+{"message":"update \"applications\" set \"application_name\" = $1, \"application_url\" = $2, \"repository_prod\" = $3, \"repository_test\" = $4, \"database_prod\" = $5, \"database_test\" = $6 where \"id\" = $7 - column \"id\" does not exist","level":"error"}
+{"message":"update \"applications\" set \"application_name\" = $1, \"application_url\" = $2, \"repository_prod\" = $3, \"repository_test\" = $4, \"database_prod\" = $5, \"database_test\" = $6 where \"id\" = $7 - column \"id\" does not exist","level":"error"}
+{"message":"update \"applications\" set \"application_name\" = $1, \"application_url\" = $2, \"repository_prod\" = $3, \"repository_test\" = $4, \"database_prod\" = $5, \"database_test\" = $6 where \"id\" = $7 - column \"id\" does not exist","level":"error"}
+{"message":"noteToUpdate is not defined","level":"error"}
+{"message":"update \"applications\" set \"application_name\" = $1, \"application_url\" = $2, \"repository_prod\" = $3, \"repository_test\" = $4, \"database_prod\" = $5, \"database_test\" = $6 where \"id\" = $7 - column \"id\" does not exist","level":"error"}
+{"message":"update \"applications\" set \"application_name\" = $1, \"application_url\" = $2, \"repository_prod\" = $3, \"repository_test\" = $4, \"database_prod\" = $5, \"database_test\" = $6 where \"id\" = $7 - column \"id\" does not exist","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Application Name is required","level":"error"}
+{"message":"Application Name is required","level":"error"}
+{"message":"Application Name is required","level":"error"}
+{"message":"insert into \"applications\" (\"application_name\", \"application_url\", \"database_prod\", \"database_test\", \"repository_prod\", \"repository_test\") values ($1, $2, $3, $4, $5, $6) returning * - duplicate key value violates unique constraint \"applications_pkey\"","level":"error"}
+{"message":"logger is not defined","level":"error"}
+{"message":"logger is not defined","level":"error"}
+{"message":"Applications with id 6 created.","level":"info"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
