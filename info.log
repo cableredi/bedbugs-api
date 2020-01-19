@@ -47,3 +47,15 @@
 {"message":"Applications with id 6 created.","level":"info"}
 {"message":"Unauthorized request to path: /api/","level":"error"}
 {"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"last_updated is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Cannot read property 'step_id' of undefined","level":"error"}
+{"message":"Cannot read property 'steps_id' of undefined","level":"error"}
+{"message":"Cannot read property 'steps_id' of undefined","level":"error"}
+{"message":"steps is not defined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
