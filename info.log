@@ -68,3 +68,17 @@
 {"message":"res.json(...).then is not a function","level":"error"}
 {"message":"steps is not defined","level":"error"}
 {"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'bug_id' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"BugsService.getById(...).then(...).thn is not a function","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"Cannot set headers after they are sent to the client","level":"error"}
+{"message":"BugsService.getById(...).then(...).then(...).next is not a function","level":"error"}
+{"message":"BugsService.getById(...).then(...).then(...).next is not a function","level":"error"}

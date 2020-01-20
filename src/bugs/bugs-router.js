@@ -60,11 +60,10 @@ bugsRouter
           })
         }
         res.bug = bug
-        next()
+        console.log('.all Bug', res.bug)
       })
-      .catch(next),
 
-      StepsService.getAllSteps(
+      .then(StepsService.getAllSteps(
         req.app.get('db'),
         req.params.bug_id,
       )
@@ -75,12 +74,15 @@ bugsRouter
             })
           }
           res.steps = steps
-          next()
-        })
-        .catch(next)
+          console.log('.all Steps', res.steps)
+        }))
+      .next()
+      .catch()
   })
 
   .get((req, res) => {
+    console.log('.get Bug', res.bug)
+    console.log('.get Steps', res.steps)
     res.json(serializeBugs(res.bug))
     res.json(res.steps.map(serializeSteps))
   })
