@@ -264,3 +264,129 @@
 {"message":"Priority must be either High, Medium, or Low","level":"error"}
 {"message":"Priority must be either High, Medium, or Low","level":"error"}
 {"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Bugs with id 4 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - invalid input syntax for type timestamp: \"[object Undefined]\"","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - invalid input syntax for type timestamp: \"[object Undefined]\"","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - invalid input syntax for type timestamp: \"[object Undefined]\"","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - invalid input syntax for type timestamp: \"[object Undefined]\"","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"ticket_number\") values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) returning * - time zone \"gmt-0700\" not recognized","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"Cannot read property 'map' of undefined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"step is not defined","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"step is not defined","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"step is not defined","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"step is not defined","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"Applications with id 3 created.","level":"info"}
+{"message":"newBug is not defined","level":"error"}
+{"message":"step is not defined","level":"error"}
+{"message":"Bugs with id 4 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Unauthorized request to path: /api/applications/123456","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/2","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [application_id] query: delete from \"applications\" where \"application_id\" = ?","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [application_id] query: delete from \"applications\" where \"application_id\" = ?","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [application_id] query: delete from \"applications\" where \"application_id\" = ?","level":"error"}
+{"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [application_id] query: delete from \"applications\" where \"application_id\" = ?","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [bug_id] query: delete from \"bugs\" where \"bug_id\" = ?","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}

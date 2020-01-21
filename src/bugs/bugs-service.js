@@ -3,12 +3,16 @@ const BugsService = {
     return knex.select('*').from('bugs')
   },
   getById(knex, id) {
-    return knex.from('bugs').select('*').where('bug_id', id).first()
+    return knex.from('bugs')
+      .select('*')
+      .from('bugs')
+      .where('bug_id', id)
+      .first()
   },
-  updateBug(knex, id, newBugsFields) {
+  updateBug(knex, id, updateBugFields) {
     return knex('bugs')
       .where({ bug_id: id })
-      .update(newBugsFields)
+      .update(updateBugFields)
   },
   insertBug(knex, newBug) {
     return knex
@@ -18,6 +22,11 @@ const BugsService = {
       .then(rows => {
         return rows[0]
       })
+  },
+  deleteBug(knex, bug_id) {
+    return knex('bugs')
+      .where({ bug_id })
+      .delete()
   }
 };
 

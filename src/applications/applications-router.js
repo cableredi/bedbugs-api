@@ -90,6 +90,17 @@ applicationsRouter
     res.json(serializeApplications(res.application))
   })
 
+  .delete( (req, res, next) => {
+    ApplicationsService.deleteApplication(
+      req.app.get('db'),
+      req.params.application_id
+    )
+      .then( () => {
+        res.status(204).end()
+      })
+      .catch(next)
+  })
+
   .patch(jsonParser, (req, res, next) => {
     const {
       application_name, application_url, repository_prod, repository_test, database_prod, database_test

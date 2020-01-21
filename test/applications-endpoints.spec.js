@@ -159,7 +159,53 @@ describe('Applications Endpoints', () => {
           )
       })
     })
-  });
-
+  }); 
   
+  describe(`DELETE/api /applications/:application_id`, () => {
+    context(`Given no applications`, () => {
+      it(`responds with 404`, () => {
+        const application_id = 123456
+        return supertest(app)
+          .delete(`/api/applications/${application_id}`)
+          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .expect(404, { error: { message: `Application Not Found` } })
+      })
+    });
+
+    context('Given there are applications in the database', () => {
+      const testApplications = fixtures.makeApplicationsArray();
+
+    beforeEach('insert applications', () => {
+      return db
+        .into('applications')
+        .insert(testApplications)
+    })
+    
+      it('responds with 204 and removes the application', () => {
+        const idToRemove = 2
+        const expectedApplications = testApplications.filter(application => application.application_id !== idToRemove)
+
+        return supertest(app)
+          .delete(`/api/applications/${idToRemove}`)
+          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .expect(204)
+          .then(res =>
+            supertest(app)
+              .get(`/api/applications`)
+              .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+              .expect(res => {
+                for (let i = 0; i < expectedApplications.length; i++) {
+                  expect(res.body[i].application_name).to.eql(expectedApplications[i].application_name)
+                  expect(res.body[i].application_url).to.eql(expectedApplications[i].application_url)
+                  expect(res.body[i].repository_prod).to.eql(expectedApplications[i].repository_prod)
+                  expect(res.body[i].repository_test).to.eql(expectedApplications[i].repository_test)
+                  expect(res.body[i].database_prod).to.eql(expectedApplications[i].database_prod)
+                  expect(res.body[i].database_test).to.eql(expectedApplications[i].database_test)
+                  expect(res.body[i]).to.have.property('application_id')  
+                }
+            })
+          )
+      })
+    });
+  });
 })

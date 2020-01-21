@@ -26,6 +26,13 @@ const serializeBugs = bug => ({
   last_updated: bug.last_updated,
 })
 
+const serializeSteps = step => ({
+  steps_id: step.steps_id,
+  bug_id: step.bug_id,
+  steps_number: step.steps_number,
+  steps: step.step
+})
+
 bugsRouter
   .route('/')
 
@@ -108,6 +115,17 @@ bugsRouter
     res.json(serializeBugs(res.bug))
   })
 
+  .delete( (req, res, next) => {
+    BugsService.deleteBug(
+      req.app.get('db'),
+      req.params.bug_id
+    )
+      .then( () => {
+        res.status(204).end()
+      })
+      .catch(next)
+  })
+
   .patch(jsonParser, (req, res, next) => {
     const {
       bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, developer, developer_notes, last_updated
@@ -136,7 +154,7 @@ bugsRouter
     bugToUpdate.developer_notes = developer_notes;
     bugToUpdate.last_updated = last_updated;
 
-    const error = getBugValidationError(newBug);
+    const error = getBugValidationError(bugToUpdate);
 
     if (error) return res.status(400).send(error);
 

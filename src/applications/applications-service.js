@@ -18,6 +18,11 @@ const ApplicationsService = {
       .then(rows => {
         return rows[0]
       })
+  },
+  deleteApplication(knex, application_id) {
+    return knex('applications')
+      .where({ application_id })
+      .delete()
   }
 };
 
