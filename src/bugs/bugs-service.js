@@ -7,7 +7,7 @@ const BugsService = {
   },
   updateBug(knex, id, newBugsFields) {
     return knex('bugs')
-      .where({ bugs_id: id })
+      .where({ bug_id: id })
       .update(newBugsFields)
   },
   insertBug(knex, newBug) {

@@ -82,3 +82,185 @@
 {"message":"Cannot set headers after they are sent to the client","level":"error"}
 {"message":"BugsService.getById(...).then(...).then(...).next is not a function","level":"error"}
 {"message":"BugsService.getById(...).then(...).then(...).next is not a function","level":"error"}
+{"message":"Cannot read property 'bug_id' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"req is not defined","level":"error"}
+{"message":"bugs is not defined","level":"error"}
+{"message":"bugs is not defined","level":"error"}
+{"message":"steps is not defined","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [bugs.bug_id] query: select * from \"bugs\" inner join \"steps\" on \"steps\".\"bug_id\" = \"bugs\".\"bug_id\" where \"bugs\".\"bug_id\" = ?","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [bugs.bug_id] query: select * from \"bugs\" inner join \"steps\" on \"steps\".\"bug_id\" = \"bugs\".\"bug_id\" where \"bugs\".\"bug_id\" = ?","level":"error"}
+{"message":"serializeApplications is not defined","level":"error"}
+{"message":"Cannot read property 'bug_id' of undefined","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/123456","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/1","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/123456","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/1","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/1","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Unauthorized request to path: /api/applications/1","level":"error"}
+{"message":"Unauthorized request to path: /api/","level":"error"}
+{"message":"Priority must be either High Medium or Low","level":"error"}
+{"message":"Priority must be either High Medium or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"status must be either Open, In-Progress or Closed","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"error is not defined","level":"error"}
+{"message":"bugs is not defined","level":"error"}
+{"message":"Bugs with id 5 created.","level":"info"}
+{"message":"serializeApplications is not defined","level":"error"}
+{"message":"Bugs with id 6 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"repository_test is not defined","level":"error"}
+{"message":"update \"bugs\" set \"bug_name\" = $1, \"application_id\" = $2, \"ticket_number\" = $3, \"priority\" = $4, \"status\" = $5, \"environment\" = $6, \"notes\" = $7, \"reported_by\" = $8, \"expected_result\" = $9, \"actual_result\" = $10, \"developer\" = $11 where \"bugs_id\" = $12 - column \"bugs_id\" does not exist","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"application_id is required","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"the database system is starting up","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"application_url is required","level":"error"}
+{"message":"Applications with id 7 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}
+{"message":"Priority must be either High, Medium, or Low","level":"error"}

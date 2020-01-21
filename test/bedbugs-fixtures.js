@@ -90,25 +90,23 @@ function makeBugsArray() {
 };
 
 function makeExpectedBug() {
-  return [
-    {
-      "bug_id": 1,
-      "bug_name": "Bug 1",
-      "application_id": 1,
-      "ticket_number": "14538",
-      "priority": "High",
-      "status": "In-Progress",
-      "environment": "Chrome version 3.2, Windows 10",
-      "notes": "Was messing around and got the wrong face",
-      "reported_by": "Gimli",
-      "reported_on": "2015-03-25T12:00:00-06:30",
-      "expected_result": "Smiley face",
-      "actual_result": "Sad Face",
-      "developer": "Frodo",
-      "developer_notes": "working on it",
-      "last_updated": "2015-03-27T12:00:00-06:30"
-    }
-  ]
+  return {
+    "bug_id": 1,
+    "bug_name": "Bug 1",
+    "application_id": 1,
+    "ticket_number": "14538",
+    "priority": "High",
+    "status": "In-Progress",
+    "environment": "Chrome version 3.2, Windows 10",
+    "notes": "Was messing around and got the wrong face",
+    "reported_by": "Gimli",
+    "reported_on": "2015-03-25T12:00:00-06:30",
+    "expected_result": "Smiley face",
+    "actual_result": "Sad Face",
+    "developer": "Frodo",
+    "developer_notes": "working on it",
+    "last_updated": "2015-03-27T12:00:00-06:30"
+  }
 };
 
 function makeStepsArray() {
@@ -175,11 +173,11 @@ function makeExpectedSteps() {
   ]
 }
 
-  module.exports = {
-    makeApplicationsArray,
-    makeExpectedApplication,
-    makeBugsArray,
-    makeExpectedBug,
-    makeStepsArray,
-    makeExpectedSteps,
-  }
+module.exports = {
+  makeApplicationsArray,
+  makeExpectedApplication,
+  makeBugsArray,
+  makeExpectedBug,
+  makeStepsArray,
+  makeExpectedSteps,
+}

@@ -42,7 +42,7 @@ applicationsRouter
       if (!newApplication[field]) {
         logger.error(`${field} is required`)
         return res.status(400).send({
-          error: { message: `'${field}' is required` }
+          error: { message: `Missing '${field}' in request body` }
         })
       }
     };

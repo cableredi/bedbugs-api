@@ -3,7 +3,6 @@ const express = require('express');
 const xss = require('xss');
 const logger = require('../logger')
 const BugsService = require('./bugs-service');
-const StepsService = require('./steps-service');
 const { getBugValidationError } = require('./bug-validator');
 
 const bugsRouter = express.Router();
@@ -24,14 +23,7 @@ const serializeBugs = bug => ({
   actual_result: xss(bug.actual_result),
   developer: xss(bug.developer),
   developer_notes: xss(bug.developer_notes),
-  last_updated: bug.last_updated
-})
-
-const serializeSteps = step => ({
-  steps_id: step.steps_id,
-  bug_id: step.bug_id,
-  steps_number: step.steps_number,
-  step: xss(step.step)
+  last_updated: bug.last_updated,
 })
 
 bugsRouter
@@ -43,6 +35,53 @@ bugsRouter
         res.json(bugs.map(serializeBugs))
       })
       .catch(next)
+  })
+
+  .post(jsonParser, (req, res, next) => {
+    const {
+      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, developer, developer_notes, last_updated
+    } = req.body
+
+    const newBug = {
+      bug_name, application_id, ticket_number, priority, status
+    };
+
+    const numberOfValues = Object.values(newBug).filter(Boolean).length
+    if (numberOfValues === 0) {
+      return res.status(400).json({
+        error: {
+          message: `Request body must contain a bug name, application, ticket_number, priority and status`
+        }
+      })
+    }
+
+    newBug.environment = environment;
+    newBug.notes = notes;
+    newBug.reported_by = reported_by;
+    newBug.reported_on = reported_on;
+    newBug.expected_result = expected_result;
+    newBug.actual_result = actual_result;
+    newBug.developer = developer;
+    newBug.developer_notes = developer_notes;
+    newBug.last_updated = last_updated;
+
+    const error = getBugValidationError(newBug);
+
+    if (error) return res.status(400).send(error);
+
+    BugsService.insertBug(
+      req.app.get('db'),
+      newBug
+    )
+      .then(bug => {
+        logger.info(`Bugs with id ${bug.bug_id} created.`)
+        res
+          .status(201)
+          .location(path.posix.join(req.originalUrl, `/${bug.bug_id}`))
+          .json(serializeBugs(bug))
+      })
+      .catch(next)
+
   })
 
 bugsRouter
@@ -60,31 +99,57 @@ bugsRouter
           })
         }
         res.bug = bug
-        console.log('.all Bug', res.bug)
+        next()
       })
-
-      .then(StepsService.getAllSteps(
-        req.app.get('db'),
-        req.params.bug_id,
-      )
-        .then(steps => {
-          if (!steps) {
-            return res.status(404).json({
-              error: { message: 'Steps Not Found' }
-            })
-          }
-          res.steps = steps
-          console.log('.all Steps', res.steps)
-        }))
-      .next()
       .catch()
   })
 
   .get((req, res) => {
-    console.log('.get Bug', res.bug)
-    console.log('.get Steps', res.steps)
     res.json(serializeBugs(res.bug))
-    res.json(res.steps.map(serializeSteps))
+  })
+
+  .patch(jsonParser, (req, res, next) => {
+    const {
+      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, developer, developer_notes, last_updated
+    } = req.body
+
+    const bugToUpdate = {
+      bug_name, application_id, ticket_number, priority, status
+    };
+
+    const numberOfValues = Object.values(bugToUpdate).filter(Boolean).length
+    if (numberOfValues === 0) {
+      return res.status(400).json({
+        error: {
+          message: `Request body must contain a bug name, application, ticket_number, priority and status`
+        }
+      })
+    }
+
+    bugToUpdate.environment = environment;
+    bugToUpdate.notes = notes;
+    bugToUpdate.reported_by = reported_by;
+    bugToUpdate.reported_on = reported_on;
+    bugToUpdate.expected_result = expected_result;
+    bugToUpdate.actual_result = actual_result;
+    bugToUpdate.developer = developer;
+    bugToUpdate.developer_notes = developer_notes;
+    bugToUpdate.last_updated = last_updated;
+
+    const error = getBugValidationError(newBug);
+
+    if (error) return res.status(400).send(error);
+
+    BugsService.updateBug(
+      req.app.get('db'),
+      req.params.bug_id,
+      bugToUpdate
+    )
+      .then(numRowsAffected => {
+        res.status(204).end()
+      })
+      .catch(next)
+
   })
 
 
