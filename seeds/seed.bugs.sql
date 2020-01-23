@@ -10,6 +10,7 @@ INSERT INTO bugs (
   reported_on,
   expected_result,
   actual_result,
+  steps,
   developer,
   developer_notes,
   last_updated
@@ -26,6 +27,7 @@ VALUES (
   '2015-03-25T12:00:00-06:30',
   'Smiley face',
   'Sad Face',
+  'this is the steps for bug 1',
   'Frodo',
   'working on it',
   '2019-12-27T12:00:00-06:30'
@@ -42,6 +44,7 @@ VALUES (
   '2015-04-25T12:00:00-06:30',
   'Arrow shot over the mountain',
   'Arrow shot through the mountain',
+  'this is the steps for bug2',
   'Samwise',
   'working on it',
   '2015-04-27T12:00:00-06:30'
@@ -58,6 +61,7 @@ VALUES (
   '2015-05-25T12:00:00-06:30',
   'Page to displayn',
   'Not Found error',
+  'this is the steps for bug 3',
   'Samwise',
   'maybe smeagal took it',
   '2015-05-27T12:00:00-06:30'

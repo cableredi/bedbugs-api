@@ -48,6 +48,7 @@ function makeBugsArray() {
       "reported_on": "2015-03-25T12:00:00-06:30",
       "expected_result": "Smiley face",
       "actual_result": "Sad Face",
+      "steps": "This is the steps for Bug 1",
       "developer": "Frodo",
       "developer_notes": "working on it",
       "last_updated": "2015-03-27T12:00:00-06:30"
@@ -65,6 +66,7 @@ function makeBugsArray() {
       "reported_on": "2015-04-25T12:00:00-06:30",
       "expected_result": "Arrow shot over the mountain",
       "actual_result": "Arrow shot through the mountain",
+      "steps": "This is the steps for Bug 2",
       "developer": "Samwise",
       "developer_notes": "working on it",
       "last_updated": "2015-04-27T12:00:00-06:30"
@@ -82,6 +84,7 @@ function makeBugsArray() {
       "reported_on": "2015-05-25T12:00:00-06:30",
       "expected_result": "Page to displayn",
       "actual_result": "Not Found error",
+      "steps": "This is the steps for Bug 3",
       "developer": "Samwise",
       "developer_notes": "maybe smeagal took it",
       "last_updated": "2015-05-27T12:00:00-06:30"
@@ -103,81 +106,17 @@ function makeExpectedBug() {
     "reported_on": "2015-03-25T12:00:00-06:30",
     "expected_result": "Smiley face",
     "actual_result": "Sad Face",
+    "steps": "This is the steps for Bug 1",
     "developer": "Frodo",
     "developer_notes": "working on it",
-    "last_updated": "2015-03-27T12:00:00-06:30"
+    "last_updated": new Date()
   }
 };
 
-function makeStepsArray() {
-  return [
-    {
-      "steps_id": 1,
-      "bug_id": 1,
-      "steps_number": 1,
-      "step": "This is step 1"
-    },
-    {
-      "steps_id": 2,
-      "bug_id": 1,
-      "steps_number": 2,
-      "step": "This is step 2"
-    },
-    {
-      "steps_id": 3,
-      "bug_id": 2,
-      "steps_number": 1,
-      "step": "This is step 1"
-    },
-    {
-      "steps_id": 4,
-      "bug_id": 2,
-      "steps_number": 2,
-      "step": "This is step 2"
-    },
-    {
-      "steps_id": 5,
-      "bug_id": 2,
-      "steps_number": 3,
-      "step": "This is step 3"
-    },
-    {
-      "steps_id": 6,
-      "bug_id": 2,
-      "steps_number": 4,
-      "step": "This is step 4"
-    },
-    {
-      "steps_id": 7,
-      "bug_id": 3,
-      "steps_number": 1,
-      "step": "This is step 1"
-    }
-  ]
-};
-
-function makeExpectedSteps() {
-  return [
-    {
-      "steps_id": 1,
-      "bug_id": 1,
-      "steps_number": 1,
-      "step": "This is step 1"
-    },
-    {
-      "steps_id": 2,
-      "bug_id": 1,
-      "steps_number": 2,
-      "step": "This is step 2"
-    },
-  ]
-}
 
 module.exports = {
   makeApplicationsArray,
   makeExpectedApplication,
   makeBugsArray,
   makeExpectedBug,
-  makeStepsArray,
-  makeExpectedSteps,
 }

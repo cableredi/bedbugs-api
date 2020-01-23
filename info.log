@@ -390,3 +390,129 @@
 {"message":"Undefined binding(s) detected when compiling DEL. Undefined column(s): [bug_id] query: delete from \"bugs\" where \"bug_id\" = ?","level":"error"}
 {"message":"Applications with id 1 created.","level":"info"}
 {"message":"Bugs with id 1 created.","level":"info"}
+{"message":"bugs is not defined","level":"error"}
+{"message":"bug is not defined","level":"error"}
+{"message":"select * from \"bugs\" left join select * from \"steps\" where \"bugs\".\"bug_id\" = $1 order by \"bugs\".\"bug_id\" asc, \"steps_number\" asc - syntax error at or near \"select\"","level":"error"}
+{"message":"select * from \"bugs\" left join select * from \"steps\" on \"bugs\".\"bug_id\" = \"steps\".\"bug_id\" order by \"bugs\".\"bug_id\" asc, \"steps_number\" asc - syntax error at or near \"select\"","level":"error"}
+{"message":"select * from \"bugs\" left join select * from \"steps\" on \"bugs\".\"bug_id\" = \"steps\".\"bug_id\" order by \"bugs\".\"bug_id\" asc, \"steps_number\" asc - syntax error at or near \"select\"","level":"error"}
+{"message":"select * from \"bugs\" left join select * from \"steps\" on \"bugs\".\"bug_id\" = \"steps\".\"bug_id\" order by \"bugs\".\"bug_id\" asc, \"steps_number\" asc - syntax error at or near \"select\"","level":"error"}
+{"message":"select * from \"steps\" where \"steps\".\"bug_id\" = $1 - invalid input syntax for type integer: \"bugs.bug_id\"","level":"error"}
+{"message":"select * from \"steps\" where \"steps\".\"bug_id\" = $1 - invalid input syntax for type integer: \"response.bug_id\"","level":"error"}
+{"message":"select *, ARRAY_AGG(steps.steps_id) as steps from \"bugs\" left join \"steps\" on \"steps\".\"bug_id\" = \"bugs\".\"bug_id\" - column \"bugs.bug_id\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select *, ARRAY_AGG(steps.steps_id) as steps from \"bugs\" left join \"steps\" on \"steps\".\"bug_id\" = \"bugs\".\"bug_id\" group by \"bugs\".\"bug_id\" - column \"steps.steps_id\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"select *, ARRAY_AGG(steps.steps_id) as steps from \"bugs\" left join \"steps\" on \"steps\".\"bug_id\" = \"bugs\".\"bug_id\" group by \"bugs\".\"bug_id\", \"steps\".\"bug_id\" - column \"steps.steps_id\" must appear in the GROUP BY clause or be used in an aggregate function","level":"error"}
+{"message":"steps is not defined","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"Cannot read property 'number' of undefined","level":"error"}
+{"message":"SELECT \"*\" \n      FROM \"bugs\" \n      LEFT JOIN \"steps\" ON \"bugs.bug_id\" = \"steps.bug_id\" - column \"bugs.bug_id\" does not exist","level":"error"}
+{"message":"bugs.map is not a function","level":"error"}
+{"message":"bugs is not defined","level":"error"}
+{"message":"res.bug.map is not a function","level":"error"}
+{"message":"bug is not defined","level":"error"}
+{"message":"res.bug.map is not a function","level":"error"}
+{"message":"Bugs with id 4 created.","level":"info"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}

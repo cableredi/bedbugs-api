@@ -11,10 +11,10 @@ describe('Applications Endpoints', () => {
       connection: process.env.TEST_DATABASE_URL,
     })
     app.set('db', db)
-    db.raw('TRUNCATE steps, bugs, applications RESTART IDENTITY CASCADE')
+    db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE')
   });
 
-  afterEach('cleanup', () => db.raw('TRUNCATE steps, bugs, applications RESTART IDENTITY CASCADE'));
+  afterEach('cleanup', () => db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE'));
 
   after('disconnect from db', () => db.destroy())
 

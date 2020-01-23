@@ -1,12 +1,15 @@
 const BugsService = {
   getAllBugs(knex) {
-    return knex.select('*').from('bugs')
-  },
-  getById(knex, id) {
-    return knex.from('bugs')
+    return knex
       .select('*')
       .from('bugs')
-      .where('bug_id', id)
+      .orderBy('bugs.bug_id', 'asc')
+  },
+  getById(knex, id) {
+    return knex
+      .select('*')
+      .from('bugs')
+      .where('bugs.bug_id', id)
       .first()
   },
   updateBug(knex, id, updateBugFields) {

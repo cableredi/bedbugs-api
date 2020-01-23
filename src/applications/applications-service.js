@@ -1,6 +1,6 @@
 const ApplicationsService = {
   getAllApplications(knex) {
-    return knex.select('*').from('applications')
+    return knex.select('*').from('applications').orderBy('application_name', 'asc')
   },
   getById(knex, id) {
     return knex.from('applications').select('*').where('application_id', id).first()

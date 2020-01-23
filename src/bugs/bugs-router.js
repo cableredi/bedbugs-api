@@ -21,16 +21,10 @@ const serializeBugs = bug => ({
   reported_on: bug.reported_on,
   expected_result: xss(bug.expected_result),
   actual_result: xss(bug.actual_result),
+  steps: xss(bug.steps),
   developer: xss(bug.developer),
   developer_notes: xss(bug.developer_notes),
   last_updated: bug.last_updated,
-})
-
-const serializeSteps = step => ({
-  steps_id: step.steps_id,
-  bug_id: step.bug_id,
-  steps_number: step.steps_number,
-  steps: step.step
 })
 
 bugsRouter
@@ -39,6 +33,7 @@ bugsRouter
   .get((req, res, next) => {
     BugsService.getAllBugs(req.app.get('db'))
       .then(bugs => {
+        
         res.json(bugs.map(serializeBugs))
       })
       .catch(next)
@@ -46,7 +41,7 @@ bugsRouter
 
   .post(jsonParser, (req, res, next) => {
     const {
-      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, developer, developer_notes, last_updated
+      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, steps, developer, developer_notes, last_updated
     } = req.body
 
     const newBug = {
@@ -68,6 +63,7 @@ bugsRouter
     newBug.reported_on = reported_on;
     newBug.expected_result = expected_result;
     newBug.actual_result = actual_result;
+    newBug.steps = steps;
     newBug.developer = developer;
     newBug.developer_notes = developer_notes;
     newBug.last_updated = last_updated;
@@ -109,18 +105,18 @@ bugsRouter
         next()
       })
       .catch()
-  })
+  })  
 
   .get((req, res) => {
     res.json(serializeBugs(res.bug))
   })
 
-  .delete( (req, res, next) => {
+  .delete((req, res, next) => {
     BugsService.deleteBug(
       req.app.get('db'),
       req.params.bug_id
     )
-      .then( () => {
+      .then(() => {
         res.status(204).end()
       })
       .catch(next)
@@ -128,7 +124,7 @@ bugsRouter
 
   .patch(jsonParser, (req, res, next) => {
     const {
-      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, developer, developer_notes, last_updated
+      bug_name, application_id, ticket_number, priority, status, environment, notes, reported_by, reported_on, expected_result, actual_result, steps, developer, developer_notes, last_updated
     } = req.body
 
     const bugToUpdate = {
@@ -150,6 +146,7 @@ bugsRouter
     bugToUpdate.reported_on = reported_on;
     bugToUpdate.expected_result = expected_result;
     bugToUpdate.actual_result = actual_result;
+    bugToUpdate.steps = steps;
     bugToUpdate.developer = developer;
     bugToUpdate.developer_notes = developer_notes;
     bugToUpdate.last_updated = last_updated;

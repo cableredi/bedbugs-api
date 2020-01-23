@@ -19,6 +19,7 @@ CREATE TABLE bugs (
   reported_on TIMESTAMP NOT NULL DEFAULT now(),
   expected_result TEXT NULL,
   actual_result TEXT NULL,
+  steps TEXT NULL,
   developer TEXT NULL,
   developer_notes TEXT NULL,
   last_updated TIMESTAMP NOT NULL DEFAULT now()
