@@ -9,8 +9,8 @@ INSERT INTO applications (
 VALUES (
   'Application 1', 
   'https://www.application1.com', 
-  'https://github.com/company/application1',
-  'https://github.com/company-test/application1',
+  'https://github.com/application1',
+  'https://github.com/applicationTest',
   'application1 prod db',
   'application1 test db'
 ),
