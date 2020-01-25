@@ -14,9 +14,7 @@ const app = express();
 app.use(morgan((CLIENT_ORIGIN === 'production') ? 'tiny' : 'common', {
   skip: () => CLIENT_ORIGIN === 'test',
 }))
-app.use(cors({
-  origin: CLIENT_ORIGIN
-}));
+app.use(cors());
 app.use(helmet());
 
 app.use(validateBearerToken);

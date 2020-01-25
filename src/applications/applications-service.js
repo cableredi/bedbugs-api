@@ -1,9 +1,16 @@
 const ApplicationsService = {
   getAllApplications(knex) {
-    return knex.select('*').from('applications').orderBy('application_name', 'asc')
+    return knex
+      .select('*')
+      .from('applications')
+      .orderBy('application_name', 'asc')
   },
   getById(knex, id) {
-    return knex.from('applications').select('*').where('application_id', id).first()
+    return knex
+    .from('applications')
+    .select('*')
+    .where('application_id', id)
+    .first()
   },
   updateApplication(knex, id, newApplicationFields) {
     return knex('applications')
