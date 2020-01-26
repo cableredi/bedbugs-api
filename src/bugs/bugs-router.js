@@ -45,19 +45,18 @@ bugsRouter
     } = req.body
 
     const newBug = {
-      bug_name, application_id, ticket_number, priority, status
+      bug_name, application_id, ticket_number, priority, status, environment
     };
 
     const numberOfValues = Object.values(newBug).filter(Boolean).length
     if (numberOfValues === 0) {
       return res.status(400).json({
         error: {
-          message: `Request body must contain a bug name, application, ticket_number, priority and status`
+          message: `Request body must contain a bug name, application, ticket_number, priority, status and environment`
         }
       })
     }
 
-    newBug.environment = environment;
     newBug.notes = notes;
     newBug.reported_by = reported_by;
     newBug.reported_on = reported_on;
@@ -128,19 +127,18 @@ bugsRouter
     } = req.body
 
     const bugToUpdate = {
-      bug_name, application_id, ticket_number, priority, status
+      bug_name, application_id, ticket_number, priority, status, environment
     };
 
     const numberOfValues = Object.values(bugToUpdate).filter(Boolean).length
     if (numberOfValues === 0) {
       return res.status(400).json({
         error: {
-          message: `Request body must contain a bug name, application, ticket_number, priority and status`
+          message: `Request body must contain a bug name, application, ticket_number, priority, status and environment`
         }
       })
     }
 
-    bugToUpdate.environment = environment;
     bugToUpdate.notes = notes;
     bugToUpdate.reported_by = reported_by;
     bugToUpdate.reported_on = reported_on;

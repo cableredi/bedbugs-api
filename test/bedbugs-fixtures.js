@@ -42,7 +42,7 @@ function makeBugsArray() {
       "ticket_number": "14538",
       "priority": "High",
       "status": "In-Progress",
-      "environment": "Chrome version 3.2, Windows 10",
+      "environment": "Test",
       "notes": "Was messing around and got the wrong face",
       "reported_by": "Gimli",
       "reported_on": "2015-03-25T12:00:00-06:30",
@@ -60,7 +60,7 @@ function makeBugsArray() {
       "ticket_number": "19088",
       "priority": "High",
       "status": "In-Progress",
-      "environment": "Chrome version 3.2, Windows 10",
+      "environment": "Pre-Production",
       "notes": "Shot the arrow but something weird happened",
       "reported_by": "Gimli",
       "reported_on": "2015-04-25T12:00:00-06:30",
@@ -78,7 +78,7 @@ function makeBugsArray() {
       "ticket_number": "16738",
       "priority": "Low",
       "status": "Open",
-      "environment": "Chrome version 3.2, Windows 10",
+      "environment": "Production",
       "notes": "just crashed",
       "reported_by": "Frodo",
       "reported_on": "2015-05-25T12:00:00-06:30",
@@ -100,7 +100,7 @@ function makeExpectedBug() {
     "ticket_number": "14538",
     "priority": "High",
     "status": "In-Progress",
-    "environment": "Chrome version 3.2, Windows 10",
+    "environment": "Test",
     "notes": "Was messing around and got the wrong face",
     "reported_by": "Gimli",
     "reported_on": "2015-03-25T12:00:00-06:30",
@@ -109,7 +109,7 @@ function makeExpectedBug() {
     "steps": "This is the steps for Bug 1",
     "developer": "Frodo",
     "developer_notes": "working on it",
-    "last_updated": new Date()
+    "last_updated": "2015-03-25T12:00:00-06:30"
   }
 };
 

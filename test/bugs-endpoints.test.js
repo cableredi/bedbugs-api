@@ -90,7 +90,7 @@ describe('Bugs Endpoints', () => {
         ticket_number: "14538",
         priority: "High",
         status: "In-Progress",
-        environment: "environment",
+        environment: "Test",
         notes: "notes",
         reported_by: "me",
         reported_on: new Date(),
@@ -220,7 +220,7 @@ describe('Bugs Endpoints', () => {
           ticket_number: "new ticket number",
           priority: "High",
           status: "In-Progress",
-          environment: "Chrome version 3.2, Windows 10",
+          environment: "Pre-Production",
           notes: "Was messing around and got the wrong face",
           reported_by: "Gimli",
           reported_on: new Date(),
@@ -256,17 +256,17 @@ describe('Bugs Endpoints', () => {
                 expect(res.body.environment).to.eql(expectedBug.environment)
                 expect(res.body.notes).to.eql(expectedBug.notes)
                 expect(res.body.reported_by).to.eql(expectedBug.reported_by)
-                const expectedReportedOn = new Date(expectedBug.reported_on).getMonth() + new Date(expectedBug.reported_on).getDay() + new Date(expectedBug.reported_on).getFullYear()
-                const actualReportedOn = new Date(res.body.reported_on).getMonth() + new Date(res.body.reported_on).getDay() + new Date(res.body.reported_on).getFullYear()
+                const expectedReportedOn = new Date().toLocaleString('en', { timeZone: 'UTC' })
+                const actualReportedOn = new Date(res.body.reported_on).toLocaleString()
                 expect(actualReportedOn).to.eql(expectedReportedOn)
                 expect(res.body.expected_result).to.eql(expectedBug.expected_result)
                 expect(res.body.actual_result).to.eql(expectedBug.actual_result)
                 expect(res.body.steps).to.eql(expectedBug.steps)
                 expect(res.body.developer).to.eql(expectedBug.developer)
                 expect(res.body.developer_notes).to.eql(expectedBug.developer_notes)
-                const expectedLatestUpdate = new Date(expectedBug.latest_date).getMonth() + new Date(expectedBug.latest_date).getDay() + new Date(expectedBug.latest_date).getFullYear()
-                const actualLatestUpdate = new Date(res.body.latest_date).getMonth() + new Date(res.body.latest_date).getDay() + new Date(res.body.latest_date).getFullYear()
-                expect(actualLatestUpdate).to.eql(expectedLatestUpdate)
+                const expectedLastUpdated = new Date().toLocaleString('en', { timeZone: 'UTC' })
+                const actualLastUpdated = new Date(res.body.reported_on).toLocaleString()
+                expect(actualLastUpdated).to.eql(expectedLastUpdated)
                 expect(res.body).to.have.property('bug_id')
               })
           )
@@ -323,13 +323,17 @@ describe('Bugs Endpoints', () => {
                   expect(res.body[i].environment).to.eql(expectedBugs[i].environment)
                   expect(res.body[i].notes).to.eql(expectedBugs[i].notes)
                   expect(res.body[i].reported_by).to.eql(expectedBugs[i].reported_by)
-                  /////////expect(res.body[i].reported_on.substring(0, 9)).to.eql(expectedBugs[i].reported_on.substring(0, 9))
+                  const expectedReportedOn = new Date(expectedBugs.reported_on).getMonth() + new Date(expectedBugs.reported_on).getDay() + new Date(expectedBugs.reported_on).getFullYear()
+                  const actualReportedOn = new Date(res.body.reported_on).getMonth() + new Date(res.body.reported_on).getDay() + new Date(res.body.reported_on).getFullYear()
+                  expect(actualReportedOn).to.eql(expectedReportedOn)
                   expect(res.body[i].expected_result).to.eql(expectedBugs[i].expected_result)
                   expect(res.body[i].actual_result).to.eql(expectedBugs[i].actual_result)
                   expect(res.body[i].steps).to.eql(expectedBugs[i].steps)
                   expect(res.body[i].developer).to.eql(expectedBugs[i].developer)
                   expect(res.body[i].developer_notes).to.eql(expectedBugs[i].developer_notes)
-                  /////////expect(res.body[i].last_updated.substring(0, 9)).to.eql(expectedBugs[i].last_updated.substring(0, 9))
+                  const expectedLatestUpdate = new Date(expectedBugs.latest_date).getMonth() + new Date(expectedBugs.latest_date).getDay() + new Date(expectedBugs.latest_date).getFullYear()
+                  const actualLatestUpdate = new Date(res.body.latest_date).getMonth() + new Date(res.body.latest_date).getDay() + new Date(res.body.latest_date).getFullYear()
+                  expect(actualLatestUpdate).to.eql(expectedLatestUpdate)
                   expect(res.body[i]).to.have.property('bug_id')
                 }
               })
