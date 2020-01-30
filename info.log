@@ -40,3 +40,11 @@
 {"message":"status must be either Test, QA, Pre-Production, or Production","level":"error"}
 {"message":"status must be either Test, QA, Pre-Production, or Production","level":"error"}
 {"message":"Bugs with id 5 created.","level":"info"}
+{"message":"Bugs with id 6 created.","level":"info"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Bugs with id 7 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}
