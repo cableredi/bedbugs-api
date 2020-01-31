@@ -17,13 +17,13 @@ If so, bedbugs is for you!!!
 ![Landing Page](./src/images/LandingPage.PNG)
 
 #### Applications Summary: [bedbugs.now.sh/applications](https://bedbugs.now.sh/applications)
-##### Get a List of the Applications and how many Bugs are either Open, In-Progress, or Closed.
+##### Get a List of all Applications and how many Bugs are either Open, In-Progress, or Closed that asre associated with this Application.
 Need to update your application?  Click on the Application Name and begin updating.  Be aware, Applications with open bugs cannot be deleted.
 
 ![Applications Summary](./src/images/ApplicationsPage.PNG)
 
 #### Bugs Summary:  [bedbugs.now.sh/bugs](https://bedbugs.now.sh/bugs)
-##### Get a List of all the Bugs and their Ticket Number, Application, Priority, Status, and Who Reported the Bug
+##### Get a List of all the Bugs along with their Ticket Number, Application, Priority, Status, and Who Reported the Bug
 Need to update your bug?  Add some developer notes?  Click on the Bug Name and begin updating.
 
 ![Bugs Summary](./src/images/BugsPage.PNG)
