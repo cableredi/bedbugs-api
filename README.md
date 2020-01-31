@@ -23,7 +23,7 @@ Get an object array of the Applications in the database
 
 Get the specified Application object
 
-![Applications List](./src/images/Applications.PNG)
+![Applications List](./src/images/applications.PNG)
 
 **/api/bugs**
 
@@ -33,7 +33,7 @@ Get an object array of the Bugs in the database
 
 Get the specified Bug object
 
-![Bugs List](./src/images/Bugs.PNG)
+![Bugs List](./src/images/bugs.PNG)
 
 
 ## Technology Used
