@@ -3,6 +3,7 @@ const express = require('express');
 const xss = require('xss');
 const logger = require('../logger')
 const ApplicationsService = require('./applications-service');
+const { requireAuth } = require('../middleware/jwt-auth');
 const { getApplicationValidationError } = require('./application-validator');
 
 const applicationsRouter = express.Router();
@@ -10,6 +11,7 @@ const jsonParser = express.json();
 
 const serializeApplications = application => ({
   application_id: application.application_id,
+  user_id: application.user_id,
   application_name: xss(application.application_name),
   application_url: application.application_url,
   repository_prod: xss(application.repository_prod),
@@ -21,8 +23,11 @@ const serializeApplications = application => ({
 applicationsRouter
   .route('/')
 
-  .get((req, res, next) => {
-    ApplicationsService.getAllApplications(req.app.get('db'))
+  .get(requireAuth, (req, res, next) => {    
+    ApplicationsService.getAllApplications(
+      req.app.get('db'),
+      req.user.user_id
+    )
       .then(applications => {
         res.json(applications.map(serializeApplications))
       })
@@ -31,11 +36,11 @@ applicationsRouter
 
   .post(jsonParser, (req, res, next) => {
     const {
-      application_name, application_url, repository_prod, repository_test, database_prod, database_test
+      application_name, application_url, repository_prod, repository_test, database_prod, database_test, user_id
     } = req.body
 
     const newApplication = {
-      application_name, application_url, repository_prod, repository_test, database_prod, database_test
+      application_name, application_url, repository_prod, repository_test, database_prod, database_test, user_id
     };
 
     for (const field of ['application_name', 'application_url']) {
@@ -46,6 +51,8 @@ applicationsRouter
         })
       }
     };
+
+    newApplication.user_id = req.user.user_id;
 
     const error = getApplicationValidationError(newApplication);
 
@@ -68,6 +75,7 @@ applicationsRouter
 
 applicationsRouter
   .route('/:application_id')
+  .all(requireAuth)
 
   .all((req, res, next) => {
     ApplicationsService.getById(

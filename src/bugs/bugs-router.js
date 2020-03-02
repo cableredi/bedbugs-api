@@ -3,6 +3,7 @@ const express = require('express');
 const xss = require('xss');
 const logger = require('../logger')
 const BugsService = require('./bugs-service');
+const { requireAuth } = require('../middleware/jwt-auth');
 const { getBugValidationError } = require('./bug-validator');
 
 const bugsRouter = express.Router();
@@ -29,11 +30,14 @@ const serializeBugs = bug => ({
 
 bugsRouter
   .route('/')
+  .all(requireAuth)
 
   .get((req, res, next) => {
-    BugsService.getAllBugs(req.app.get('db'))
+    BugsService.getAllBugs(
+      req.app.get('db'),
+      req.user.user_id
+    )
       .then(bugs => {
-        
         res.json(bugs.map(serializeBugs))
       })
       .catch(next)

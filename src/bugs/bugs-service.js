@@ -1,8 +1,11 @@
 const BugsService = {
-  getAllBugs(knex) {
+  getAllBugs(knex, user_id) {
     return knex
       .select('*')
       .from('bugs')
+      .where('users.user_id', user_id)
+      .leftJoin('applications', 'applications.application_id', 'bugs.application_id')
+      .leftJoin('users', 'users.user_id', 'applications.user_id')
       .orderBy('bugs.bug_id', 'asc')
   },
   getById(knex, id) {

@@ -50,6 +50,18 @@ Get an object array of the Bugs in the database
 
 Get a specific Bug object
 
+**/api/auth/login**
+
+Authenticate Login
+
+**/api/auth/refresh**
+
+Authenticate Refresh
+
+**/api/users**
+
+Register User
+
 ## Source Code
 bedbugs Client: [https://github.com/cableredi/bedbugs-client](https://github.com/cableredi/bedbugs-client)
 

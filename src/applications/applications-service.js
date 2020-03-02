@@ -1,8 +1,9 @@
 const ApplicationsService = {
-  getAllApplications(knex) {
+  getAllApplications(knex, user_id) {
     return knex
       .select('*')
       .from('applications')
+      .where('user_id', user_id)
       .orderBy('application_name', 'asc')
   },
   getById(knex, id) {

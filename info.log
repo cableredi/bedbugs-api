@@ -48,3 +48,82 @@
 {"message":"Bugs with id 7 created.","level":"info"}
 {"message":"Applications with id 1 created.","level":"info"}
 {"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/bugs","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Unauthorized request to path: /api/applications","level":"error"}
+{"message":"Applications with id 3 created.","level":"info"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Bugs with id 7 created.","level":"info"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"HTMLFormControlsCollection is not defined","level":"error"}
+{"message":"HTMLFormControlsCollection is not defined","level":"error"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"Applications with id 4 created.","level":"info"}
+{"message":"Bugs with id 8 created.","level":"info"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [applications.user_id] query: select * from \"applications\" left join \"users\" on \"users\".\"user_id\" = \"applications\".\"user_id\" where \"applications\".\"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [applications.user_id] query: select * from \"applications\" left join \"users\" on \"users\".\"user_id\" = \"applications\".\"user_id\" where \"applications\".\"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [applications.user_id] query: select * from \"applications\" where \"applications\".\"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [applications.user_id] query: select * from \"applications\" where \"applications\".\"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [applications.user_id] query: select * from \"applications\" where \"applications\".\"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"Undefined binding(s) detected when compiling SELECT. Undefined column(s): [user_id] query: select * from \"applications\" where \"user_id\" = ? order by \"application_name\" asc","level":"error"}
+{"message":"user_id is not defined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"select * from \"bugs\" left join \"users\" on \"users\".\"user_id\" = \"classes\".\"user_id\" where \"applications\".\"user_id\" = $1 order by \"bugs\".\"bug_id\" asc - missing FROM-clause entry for table \"classes\"","level":"error"}
+{"message":"Bugs with id 9 created.","level":"info"}

@@ -1,4 +1,5 @@
 INSERT INTO applications (
+  user_id,
   application_name, 
   application_url, 
   repository_prod, 
@@ -7,6 +8,7 @@ INSERT INTO applications (
   database_test
 )
 VALUES (
+  1,
   'Application 1', 
   'https://www.application1.com', 
   'https://github.com/application1',
@@ -15,6 +17,7 @@ VALUES (
   'application1 test db'
 ),
 (
+  1,
   'Application 2', 
   'https://www.application2.com', 
   'https://github.com/company/application2',
