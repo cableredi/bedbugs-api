@@ -127,3 +127,87 @@
 {"message":"Cannot read property 'user_id' of undefined","level":"error"}
 {"message":"select * from \"bugs\" left join \"users\" on \"users\".\"user_id\" = \"classes\".\"user_id\" where \"applications\".\"user_id\" = $1 order by \"bugs\".\"bug_id\" asc - missing FROM-clause entry for table \"classes\"","level":"error"}
 {"message":"Bugs with id 9 created.","level":"info"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"Cannot read property 'user_id' of undefined","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Applications with id 5 created.","level":"info"}
+{"message":"Applications with id 6 created.","level":"info"}
+{"message":"Applications with id 7 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Applications with id 1 created.","level":"info"}
+{"message":"Bugs with id 1 created.","level":"info"}

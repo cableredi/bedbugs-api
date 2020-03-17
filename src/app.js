@@ -18,7 +18,6 @@ app.use(morgan((CLIENT_ORIGIN === 'production') ? 'tiny' : 'common', {
 app.use(cors());
 app.use(helmet());
 
-
 app.use('/api/applications', applicationsRouter);
 app.use('/api/bugs', bugsRouter);
 app.use('/api/auth', authRouter);

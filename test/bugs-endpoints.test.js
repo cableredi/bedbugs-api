@@ -11,19 +11,27 @@ describe('Bugs Endpoints', () => {
       connection: process.env.TEST_DATABASE_URL,
     })
     app.set('db', db)
-    db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE')
+    db.raw('TRUNCATE users, bugs, applications RESTART IDENTITY CASCADE')
   });
 
-  afterEach('cleanup', () => db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE'));
+  afterEach('cleanup', () => db.raw('TRUNCATE users, bugs, applications RESTART IDENTITY CASCADE'));
 
   after('disconnect from db', () => db.destroy())
 
   describe('GET /api/bugs', () => {
+    const testUsers = fixtures.makeUsersArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
+
     context(`Given no bugs`, () => {
       it(`responds with 200 and an empty list`, () => {
         return supertest(app)
           .get('/api/bugs')
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(200, [])
       })
     })
@@ -47,7 +55,7 @@ describe('Bugs Endpoints', () => {
       it('gets the bugs from database', () => {
         return supertest(app)
           .get('/api/bugs')
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(res => {
             for (let i = 0; i < testBugs.length; i++) {
               expect(res.body[i].bug_name).to.eql(testBugs[i].bug_name)
@@ -73,7 +81,14 @@ describe('Bugs Endpoints', () => {
   })
 
   describe(`POST /api/bugs`, () => {
+    const testUsers = fixtures.makeUsersArray();
     const testApplications = fixtures.makeApplicationsArray()
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
 
     beforeEach('insert application', () => {
       return db
@@ -105,7 +120,7 @@ describe('Bugs Endpoints', () => {
       return supertest(app)
         .post('/api/bugs')
         .send(newBug)
-        .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+        .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
         .expect(201)
         .expect(res => {
           expect(res.body.bug_name).to.eql(newBug.bug_name)
@@ -129,7 +144,7 @@ describe('Bugs Endpoints', () => {
         .then(res =>
           supertest(app)
             .get(`/api/bugs/${res.body.bug_id}`)
-            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+            .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
             .expect(res.body)
         )
     });
@@ -137,8 +152,15 @@ describe('Bugs Endpoints', () => {
 
 
   describe('GET /api/bugs/:bug_id', () => {
-    const testApplications = fixtures.makeApplicationsArray()
-    const testBugs = fixtures.makeBugsArray()
+    const testUsers = fixtures.makeUsersArray();
+    const testApplications = fixtures.makeApplicationsArray();
+    const testBugs = fixtures.makeBugsArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
 
     beforeEach('insert application', () => {
       return db
@@ -158,7 +180,7 @@ describe('Bugs Endpoints', () => {
 
       return supertest(app)
         .get(`/api/bugs/${bug_id}`)
-        .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+        .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
         .expect(res => {
           expect(res.body.bug_name).to.eql(expectedBug.bug_name)
           expect(res.body.application_id).to.eql(expectedBug.application_id)
@@ -185,8 +207,15 @@ describe('Bugs Endpoints', () => {
   });
 
   describe(`PATCH /api/bugs/:bug_id`, () => {
+    const testUsers = fixtures.makeUsersArray();
     const testApplications = fixtures.makeApplicationsArray();
     const testBugs = fixtures.makeBugsArray()
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
 
     beforeEach('insert applications', () => {
       return db
@@ -205,7 +234,7 @@ describe('Bugs Endpoints', () => {
         const bug_id = 123456
         return supertest(app)
           .patch(`/api/bugs/${bug_id}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(404, { error: { message: `Bug Not Found` } })
       })
     })
@@ -240,12 +269,12 @@ describe('Bugs Endpoints', () => {
         return supertest(app)
           .patch(`/api/bugs/${idToUpdate}`)
           .send(updateBug)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(204)
           .then(res =>
             supertest(app)
               .get(`/api/bugs/${idToUpdate}`)
-              .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+              .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
               .expect(200)
               .expect(res => {
                 expect(res.body.bug_name).to.eql(expectedBug.bug_name)
@@ -275,12 +304,20 @@ describe('Bugs Endpoints', () => {
   });
 
   describe(`DELETE/api /bugs/:bug_id`, () => {
+    const testUsers = fixtures.makeUsersArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
+    
     context(`Given no bugs`, () => {
       it(`responds with 404`, () => {
         const bug_id = 123456
         return supertest(app)
           .delete(`/api/bugs/${bug_id}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(404, { error: { message: `Bug Not Found` } })
       })
     });
@@ -307,12 +344,12 @@ describe('Bugs Endpoints', () => {
 
         return supertest(app)
           .delete(`/api/bugs/${idToRemove}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
           .expect(204)
           .then(res =>
             supertest(app)
               .get(`/api/bugs`)
-              .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+              .set( 'Authorization', fixtures.makeAuthHeader(testUsers[0]) )
               .expect(res => {
                 for (let i = 0; i < expectedBugs.length; i++) {
                   expect(res.body[i].bug_name).to.eql(expectedBugs[i].bug_name)

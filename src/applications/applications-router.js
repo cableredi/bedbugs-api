@@ -34,7 +34,7 @@ applicationsRouter
       .catch(next)
   })
 
-  .post(jsonParser, (req, res, next) => {
+  .post(requireAuth, jsonParser, (req, res, next) => {
     const {
       application_name, application_url, repository_prod, repository_test, database_prod, database_test, user_id
     } = req.body

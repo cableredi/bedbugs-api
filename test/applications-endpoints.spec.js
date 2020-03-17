@@ -11,19 +11,27 @@ describe('Applications Endpoints', () => {
       connection: process.env.TEST_DATABASE_URL,
     })
     app.set('db', db)
-    db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE')
+    db.raw('TRUNCATE users, bugs, applications RESTART IDENTITY CASCADE')
   });
 
-  afterEach('cleanup', () => db.raw('TRUNCATE bugs, applications RESTART IDENTITY CASCADE'));
+  afterEach('cleanup', () => db.raw('TRUNCATE users, bugs, applications RESTART IDENTITY CASCADE'));
 
   after('disconnect from db', () => db.destroy())
 
   describe('GET /api/applications', () => {
+    const testUsers = fixtures.makeUsersArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
+    
     context(`Given no applications`, () => {
       it(`responds with 200 and an empty list`, () => {
         return supertest(app)
           .get('/api/applications')
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(200, [])
       })
     })
@@ -40,15 +48,24 @@ describe('Applications Endpoints', () => {
       it('gets the applications from database', () => {
         return supertest(app)
           .get('/api/applications')
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(200, testApplications)
       })
     })
   })
 
   describe(`POST /api/applications`, () => {
+    const testUsers = fixtures.makeUsersArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
+
     it(`creates an application, responding with 201 and the new application`, function () {
-      this.retries(3)
+      this.retries(3);
+
       const newApplication = {
         application_name: 'add application name',
         application_url: 'http://www.newtest.com',
@@ -56,13 +73,16 @@ describe('Applications Endpoints', () => {
         repository_test: 'update repository test',
         database_prod: 'update database prod',
         database_test: 'update database test',
-      }
+        user_id: 1,
+      };
+
       return supertest(app)
         .post('/api/applications')
         .send(newApplication)
-        .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+        .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
         .expect(201)
         .expect(res => {
+          expect(res.body.user_id).to.eql(newApplication.user_id)
           expect(res.body.application_name).to.eql(newApplication.application_name)
           expect(res.body.application_url).to.eql(newApplication.application_url)
           expect(res.body.repository_prod).to.eql(newApplication.repository_prod)
@@ -75,14 +95,21 @@ describe('Applications Endpoints', () => {
         .then(res =>
           supertest(app)
             .get(`/api/applications/${res.body.application_id}`)
-            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+            .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
             .expect(res.body)
         )
     });
   });
 
   describe('GET /api/applications/:application_id', () => {
+    const testUsers = fixtures.makeUsersArray();
     const testApplications = fixtures.makeApplicationsArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
 
     beforeEach('insert applications', () => {
       return db
@@ -96,13 +123,20 @@ describe('Applications Endpoints', () => {
 
       return supertest(app)
         .get(`/api/applications/${application_id}`)
-        .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+        .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
         .expect(200, expectedApplication)
     })
   })
 
   describe(`PATCH /api/applications/:application_id`, () => {
+    const testUsers = fixtures.makeUsersArray();
     const testApplications = fixtures.makeApplicationsArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
 
     beforeEach('insert applications', () => {
       return db
@@ -115,7 +149,7 @@ describe('Applications Endpoints', () => {
         const application_id = 123456
         return supertest(app)
           .patch(`/api/applications/${application_id}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(404, { error: { message: `Application Not Found` } })
       })
     })
@@ -140,12 +174,12 @@ describe('Applications Endpoints', () => {
         return supertest(app)
           .patch(`/api/applications/${idToUpdate}`)
           .send(updateApplication)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(204)
           .then(res =>
             supertest(app)
               .get(`/api/applications/${idToUpdate}`)
-              .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+              .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
               .expect(200)
               .expect(res => {
                 expect(res.body.application_name).to.eql(expectedApplication.application_name)
@@ -162,12 +196,20 @@ describe('Applications Endpoints', () => {
   }); 
   
   describe(`DELETE/api /applications/:application_id`, () => {
+    const testUsers = fixtures.makeUsersArray();
+
+    beforeEach('insert users', () => {
+      return db
+        .into('users')
+        .insert(testUsers)
+    })
+
     context(`Given no applications`, () => {
       it(`responds with 404`, () => {
         const application_id = 123456
         return supertest(app)
           .delete(`/api/applications/${application_id}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(404, { error: { message: `Application Not Found` } })
       })
     });
@@ -187,12 +229,12 @@ describe('Applications Endpoints', () => {
 
         return supertest(app)
           .delete(`/api/applications/${idToRemove}`)
-          .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+          .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
           .expect(204)
           .then(res =>
             supertest(app)
               .get(`/api/applications`)
-              .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+              .set('Authorization', fixtures.makeAuthHeader(testUsers[0]))
               .expect(res => {
                 for (let i = 0; i < expectedApplications.length; i++) {
                   expect(res.body[i].application_name).to.eql(expectedApplications[i].application_name)
