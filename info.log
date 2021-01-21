@@ -211,3 +211,13 @@
 {"message":"Applications with id 1 created.","level":"info"}
 {"message":"Applications with id 1 created.","level":"info"}
 {"message":"Bugs with id 1 created.","level":"info"}
+{"message":"Applications with id 8 created.","level":"info"}
+{"message":"Unexpected token \" in JSON at position 0","level":"error"}
+{"message":"Unexpected token \" in JSON at position 0","level":"error"}
+{"message":"Applications with id 9 created.","level":"info"}
+{"message":"Applications with id 10 created.","level":"info"}
+{"message":"Applications with id 11 created.","level":"info"}
+{"message":"Applications with id 12 created.","level":"info"}
+{"message":"Applications with id 13 created.","level":"info"}
+{"message":"Applications with id 14 created.","level":"info"}
+{"message":"insert into \"bugs\" (\"actual_result\", \"application_id\", \"bug_name\", \"developer\", \"developer_notes\", \"environment\", \"expected_result\", \"last_updated\", \"notes\", \"priority\", \"reported_by\", \"reported_on\", \"status\", \"steps\", \"ticket_number\") values ($1, $2, $3, $4, DEFAULT, $5, $6, DEFAULT, $7, $8, $9, $10, $11, $12, $13) returning * - invalid input syntax for type timestamp: \"\"","level":"error"}
